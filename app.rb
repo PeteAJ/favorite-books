@@ -13,7 +13,7 @@ class App < Sinatra::Base
     erb :newbook
   end
 
-   post '/faves' do
+   post '/book' do
     @book = Book.new(params[:author],params[:title],params[:year],params[:notes])
     erb :faves
   end
