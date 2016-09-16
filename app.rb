@@ -13,13 +13,18 @@ class App < Sinatra::Base
     erb :'readers/new'
   end
 
-   post '/reader' do
+
+
+   post '/readers' do
     @reader = Reader.new(params[:reader])
+
+
    params[:reader][:books].each do |details|
     Book.new(details)
    end
     @books = Book.all
     erb :'readers/show'
   end
+
 
 end

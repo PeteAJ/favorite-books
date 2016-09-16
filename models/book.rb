@@ -1,5 +1,5 @@
 class Book
-attr_reader :author, :title, :year, :notes
+attr_accessor :author, :title, :year, :notes
 
 @@books = []
 
@@ -8,6 +8,7 @@ def initialize(person)
     @title = person[:title]
     @year = person[:year]
     @notes = person[:notes]
+    @@books << self
 end 
 
 def self.all
