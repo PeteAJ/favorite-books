@@ -1,12 +1,21 @@
 class Book
+attr_reader :author, :title, :year, :notes
 
-  attr_accessor :author, :title, :year, :notes
+@@books = []
 
-  def initialize(author, title, year, notes)
-    @author = author
-    @title = title
-    @year = year
-    @notes = notes
-  end
-
+def initialize(person) 
+  @author = person[:author]
+    @title = person[:title]
+    @year = person[:year]
+    @notes = person[:notes]
 end 
+
+def self.all
+  @@books
+end
+
+def self.clear
+  @@books = []
+end
+
+  end
