@@ -10,12 +10,16 @@ class App < Sinatra::Base
   end
 
   get '/new' do
-    erb :newbook
+    erb :'readers/new'
   end
 
-   post '/book' do
-    @book = Book.new(params[:author],params[:title],params[:year],params[:notes])
-    erb :book
+   post '/reader' do
+    @reader = Reader.new(params[:reader])
+   params[:reader][:books].each do |details|
+    Book.new(details)
+   end
+    @books = Book.all
+    erb :'readers/show'
   end
 
 end
