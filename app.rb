@@ -15,7 +15,7 @@ class App < Sinatra::Base
 
    post '/book' do
     @book = Book.new(params[:author],params[:title],params[:year],params[:notes])
-    erb :faves
+    erb :book
   end
 
 end

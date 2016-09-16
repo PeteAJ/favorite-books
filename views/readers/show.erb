@@ -1,0 +1,18 @@
+
+<h1>Readers</h1>
+
+<div class="reader">
+  <h3>Name: <%= @reader.name %></h3><br>
+  <h4>Favorite Type of Book: <%= @reader.favorite_genre %></h4><br>
+</div><br>
+
+
+<h1>Books</h1>
+<% @books.each do |ship| %>
+  <div class="book">
+    <p>Author: <%= book.author %></p><br>
+    <p>Title: <%= book.title %></p><br>
+    <p>Year: <%= book.year %></p>
+    <p>Notes: <%= book.notes %></p>
+  </div><br>
+<% end %>
