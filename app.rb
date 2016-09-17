@@ -15,7 +15,9 @@ class App < Sinatra::Base
 
 
 
+
    post '/readers' do
+    
     @reader = Reader.new(params[:reader])
 
 

@@ -1,5 +1,5 @@
 class Book
-attr_accessor :author, :title, :year, :notes
+attr_reader :author, :title, :year, :notes
 
 @@books = []
 

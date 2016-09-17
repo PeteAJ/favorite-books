@@ -1,5 +1,5 @@
 class Reader
-    attr_accessor :name, :favorite_genre
+    attr_reader :name, :favorite_genre
 
     READERS = []
 
