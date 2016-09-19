@@ -9,4 +9,4 @@ require 'sinatra/base'
 
 
 
-require_relative '../app/controller/application_controller'
+require_relative '../app'
