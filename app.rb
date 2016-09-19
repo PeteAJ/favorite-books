@@ -18,24 +18,24 @@ class App < Sinatra::Base
     erb :'readers/new'
   end
 
-  get '/registrations/signup' do
+  get '/signup' do
     erb :'/registrations/signup'
   end
 
   post '/registrations' do
     
-    redirect :home
+    redirect :'/new'
   end
 
-  get '/sessions/login' do
+  get '/login' do
     erb :'sessions/login'
   end
 
   post '/sessions' do
-    redirect :home
+    redirect :index
   end
 
-  get '/sessions/logout' do 
+  get '/logout' do 
     redirect '/'
   end
 
