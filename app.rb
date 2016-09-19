@@ -4,6 +4,11 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
 
+   configure do
+    enable :sessions
+    set :session_secret, 'printed_matter'
+  end
+
 
   get '/' do
     erb :index
@@ -15,10 +20,9 @@ class App < Sinatra::Base
 
 
 
-
    post '/readers' do
-    
-    @reader = Reader.new(params[:reader])
+  
+    @reader = Readers.new(params[:reader])
 
 
    params[:reader][:books].each do |details|
@@ -26,6 +30,12 @@ class App < Sinatra::Base
    end
     @books = Book.all
     erb :'readers/show'
+  end
+
+   post '/checkout' do 
+    session[:reader] = params[:reader]
+    @session = session
+    erb :index
   end
 
 

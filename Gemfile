@@ -4,6 +4,8 @@ source "https://rubygems.org"
 # gem "rails"
 
 gem 'sinatra', require: 'sinatra/base'
+gem 'activerecord', '4.2.5'
+gem 'sinatra-activerecord'
 gem 'rake'
 gem 'thin'
 gem 'shotgun'
@@ -16,3 +18,10 @@ group :test do
   gem 'rack-test'
   gem 'poltergeist'
 end
+
+  group :development do
+        gem 'shotgun'
+        gem 'pry'
+        gem 'tux'
+        gem 'sqlite3'
+    end
