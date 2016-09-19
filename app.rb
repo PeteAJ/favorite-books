@@ -2,7 +2,7 @@ require 'sinatra/base'
 require_relative 'config/environment'
 
 
-class ApplicationController < Sinatra::Base
+class App < Sinatra::Base
 
    configure do
     enable :sessions
