@@ -32,14 +32,18 @@ class App < Sinatra::Base
   end
 
   post '/sessions' do
-    redirect :index
+    redirect :'/new'
   end
 
   get '/logout' do 
     redirect '/'
   end
 
-   post '/readers' do
+    post '/readers' do
+    "Hello World"
+  end
+
+   get '/readers' do
   
     @reader = Readers.new(params[:reader])
 
