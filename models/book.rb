@@ -1,4 +1,4 @@
-class Book
+class Book < ActiveRecord::Base
 attr_reader :author, :title, :year, :notes
 
 @@books = []

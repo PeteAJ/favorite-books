@@ -1,4 +1,6 @@
 require 'active_record'
+require "sinatra/activerecord/rake"
+require "./app.rb"
 include ActiveRecord::Tasks
 
 DatabaseTasks.db_dir = 'db'

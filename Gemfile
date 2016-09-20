@@ -11,6 +11,7 @@ gem 'thin'
 gem 'shotgun'
 gem 'pry'
 gem 'require_all'
+gem 'rails'
 
 group :test do
   gem 'rspec'

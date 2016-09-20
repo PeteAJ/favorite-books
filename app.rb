@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'rails/all'
 require_relative 'config/environment'
 
 
@@ -39,11 +40,11 @@ class App < Sinatra::Base
     redirect '/'
   end
 
-    post '/readers' do
-    "Hello World"
-  end
+get '/readers' do 
+end
 
-   get '/readers' do
+
+   post '/readers' do
   
     @reader = Readers.new(params[:reader])
 

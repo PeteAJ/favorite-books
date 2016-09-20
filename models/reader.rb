@@ -1,4 +1,4 @@
-class Reader
+class Reader < ActiveRecord::Base
     attr_reader :name, :favorite_genre
 
     READERS = []

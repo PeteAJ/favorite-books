@@ -1,11 +1,11 @@
 
 class CreateBooks < ActiveRecord::Migration
   def change
-    create_table :books do |b|
-      b.string :author
-      b.string :title
-      b.integer :year
-      b.string :notes
+    create_table :books do |t|
+      t.string :author
+      t.string :title
+      t.integer :year
+      t.string :notes
     end
   end
 end
